@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$.ajax({
+					url: 'http://jsonplaceholder.typicode.com/albums/4',
+					type: "GET",
+					success: function(html){
+						var obj = html;
+						$("#userID").append("userID: "+obj.userId);
+						$("#id").append("ID: "+obj.id);
+						$("#title").append("Title: "+obj.title);
+						
+						
+					}
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+		<div id="userID" >
+		</div>
+		<div id="id">
+		</div>
+		<div id="title">
+		</div>
+
+	</body>
+</html>
